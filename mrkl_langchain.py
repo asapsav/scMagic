@@ -20,7 +20,7 @@ from clear_results import with_clear_container
 #DB_PATH = (Path(__file__).parent / "Chinook.db").absolute()
 
 SAVED_SESSIONS = {
-    "How many genes in this scRNA expression matrix?",
+    "How many genes in this scRNA expression matrix?": None
 }
 
 st.set_page_config(
@@ -40,7 +40,7 @@ else:
     enable_custom = False
 
 # Tools setup
-llm = OpenAI(temperature=0, openai_api_key=openai_api_key, streaming=True)
+llm = OpenAI(temperature=0, openai_api_key=openai_api_key, streaming=True, model="gpt-3.5-turbo-0613")
 search = DuckDuckGoSearchAPIWrapper()
 llm_math_chain = LLMMathChain.from_llm(llm)
 #db = SQLDatabase.from_uri(f"sqlite:///{DB_PATH}")
@@ -83,7 +83,7 @@ if with_clear_container(submit_clicked):
     output_container = output_container.container()
     output_container.chat_message("user").write(user_input)
 
-    answer_container = output_container.chat_message("assistant", avatar="🧬🦜")
+    answer_container = output_container.chat_message("assistant", avatar="🦜")
     st_callback = StreamlitCallbackHandler(answer_container)
 
     # If we've saved this question, play it back instead of actually running LangChain
