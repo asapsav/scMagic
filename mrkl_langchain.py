@@ -1,21 +1,21 @@
-"""This code is a fork from Langchain and Streamlit's Agent repo:"""
-"""https://github.com/langchain-ai/streamlit-agent/tree/main"""
-"""Credit to these amazing open source developers"""
+#This code is a fork from Langchain and Streamlit's Agent repo:
+#https://github.com/langchain-ai/streamlit-agent/tree/main
+#Credit to these amazing open source developers
 
 from pathlib import Path
 
 import streamlit as st
 
-from langchain import SQLDatabase
+#from langchain import SQLDatabase
 from langchain.agents import AgentType
 from langchain.agents import initialize_agent, Tool
 from langchain.callbacks import StreamlitCallbackHandler
-from langchain.chains import LLMMathChain, SQLDatabaseChain
+from langchain.chains import LLMMathChain#, SQLDatabaseChain
 from langchain.llms import OpenAI
 from langchain.utilities import DuckDuckGoSearchAPIWrapper
 
-from streamlit_agent.callbacks.capturing_callback_handler import playback_callbacks
-from streamlit_agent.clear_results import with_clear_container
+from callbacks.capturing_callback_handler import playback_callbacks
+from clear_results import with_clear_container
 
 #DB_PATH = (Path(__file__).parent / "Chinook.db").absolute()
 
