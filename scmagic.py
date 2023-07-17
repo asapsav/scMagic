@@ -40,7 +40,7 @@ else:
     enable_custom = False
 
 # Tools setup
-llm = OpenAI(temperature=0, openai_api_key=openai_api_key, streaming=True, model="gpt-3.5-turbo-0613")
+llm = OpenAI(temperature=0, openai_api_key=openai_api_key, streaming=True)
 search = DuckDuckGoSearchAPIWrapper()
 llm_math_chain = LLMMathChain.from_llm(llm)
 #db = SQLDatabase.from_uri(f"sqlite:///{DB_PATH}")
