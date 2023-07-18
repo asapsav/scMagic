@@ -6,22 +6,13 @@ from pathlib import Path
 
 import streamlit as st
 
-#from langchain import SQLDatabase
 from langchain.agents import AgentType
 from langchain.agents import initialize_agent, Tool
 from langchain.callbacks import StreamlitCallbackHandler
-from langchain.chains import LLMMathChain#, SQLDatabaseChain
 from langchain.llms import OpenAI
-from langchain.utilities import DuckDuckGoSearchAPIWrapper
 
 from callbacks.capturing_callback_handler import playback_callbacks
 from clear_results import with_clear_container
-
-#DB_PATH = (Path(__file__).parent / "Chinook.db").absolute()
-
-SAVED_SESSIONS = {
-    "How many genes in this scRNA expression matrix?": None
-}
 
 st.set_page_config(
     page_title="scMagic", page_icon="🧬🦜", layout="wide", initial_sidebar_state="collapsed"
@@ -41,10 +32,10 @@ else:
 
 # Tools setup
 llm = OpenAI(temperature=0, openai_api_key=openai_api_key, streaming=True)
-search = DuckDuckGoSearchAPIWrapper()
-llm_math_chain = LLMMathChain.from_llm(llm)
-#db = SQLDatabase.from_uri(f"sqlite:///{DB_PATH}")
-#db_chain = SQLDatabaseChain.from_llm(llm, db)
+
+def read_book():
+    # looks up
+    pass
 tools = [
     Tool(
         name="Search",
