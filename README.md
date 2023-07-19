@@ -11,7 +11,7 @@ A website that you upload scRNA input file to along with some research questions
 
 ### Roadmap
 
-- [ ]  Make “hello world” Streamlit langchain demo running
+- [v]  Make “hello world” Streamlit langchain demo running
 - [ ]  Make it running on a demo sc DataSet but do random things (silence “upload dataset button”)
 - [ ]  Implement the loop: 1) generate next step given last step + the "book" 2) write code for the next step and run the repl 3) write observation, 1) generate next ..
 - [ ]  Make “hello world” Streamlit langchain demo running with Chroma DB (sepparately, write down why we need and dont need vector db rn)
