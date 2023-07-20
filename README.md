@@ -1,9 +1,6 @@
 # scMagic
-We aim to create a useful co-pilot for scRNA analysis
-
-## Agent v2
-
-> How crazy is the idea of designing a LLM agent like [this one](https://github.com/MineDojo/Voyager) (Voyager) that plays Minecraft? Voyager design [(.ppt)](https://drive.google.com/file/d/12VDQzaOynBKROvpaJdsoWYCJW_XLE7Nx/view) - ***not crazy and should be done***
+We aim to create a useful co-pilot/autopilot for scRNA analysis
+> This repository is, I cannot stress this enough, very experimental. Do not use it as a dependency.
 
 ### Vision of the project
 
@@ -11,8 +8,8 @@ A website that you upload scRNA input file to along with some research questions
 
 ### Roadmap
 
-- [v]  Make “hello world” Streamlit langchain demo running
-- [ ]  Make it running on a demo sc DataSet but do random things (silence “upload dataset button”)
+- [V]  Make “hello world” Streamlit langchain demo running
+- [ ]  Make it running on a demo sc data but do random things (silence “upload dataset button”)
 - [ ]  Implement the loop: 1) generate next step given last step + the "book" 2) write code for the next step and run the repl 3) write observation, 1) generate next ..
 - [ ]  Make “hello world” Streamlit langchain demo running with Chroma DB (sepparately, write down why we need and dont need vector db rn)
 - [ ]  Add github embed to give a star easily, or some kind “easy feedback” functionality
