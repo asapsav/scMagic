@@ -2,18 +2,19 @@
 We aim to create a useful co-pilot/autopilot for scRNA analysis
 > This repository is, I cannot stress this enough, very experimental. Do not use it as a dependency.
 
-### Vision of the project
+### v0.2 vision
 
 A website that you upload scRNA input file to along with some research questions, it runs the analysis on the cloud, then emails you when the report is ready.
 
 ### Roadmap
 
-- [V]  Make “hello world” Streamlit langchain demo running
+- [x]  Make “hello world” Streamlit langchain demo running
 - [ ]  Make it running on a demo sc data but do random things (silence “upload dataset button”)
 - [ ]  Implement the loop: 1) generate next step given last step + the "book" 2) write code for the next step and run the repl 3) write observation, 1) generate next ..
 - [ ]  Make “hello world” Streamlit langchain demo running with Chroma DB (sepparately, write down why we need and dont need vector db rn)
 - [ ]  Add github embed to give a star easily, or some kind “easy feedback” functionality
-- [ ]  
+- [x]  OD on cheap coffee and twix chocoalte bars and come up with a new general problem-solver architecture
+- [ ] Make a completely open source version using Llama v2 functions calling API by Ed
 
 ### Most relevant resources for Agent tools and books
 
