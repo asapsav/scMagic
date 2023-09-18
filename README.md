@@ -9,7 +9,9 @@ We aim to create a useful co-pilot for scRNA-seq analysis
 ## What?
 ### v0.2 vision
 
-A website that you upload scRNA input file to along with some research questions, it runs the analysis on the cloud, then emails you when the report is ready.
+1) Upload scRNA-seq inputs along with some research questions
+2) LLM agent-based AI runs the analysis on the cloud, then emails you when the report is ready.
+
 ## Why?
 To advance alinged AI we want to train it to solve complex planning and creativity problems. scRNA-seq analyis is one of those problems, that we feel competitive advantage in.
 
