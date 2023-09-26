@@ -26,8 +26,6 @@ Sure, analyzing scRNA-seq data involves multiple steps, each of which requires s
 12. **Data Integration:** If you have multiple datasets, you might want to integrate them. There are tools available like Harmony, LIGER or Seurat's integration function.
 
 Remember to validate your findings with an independent method (like FACS or immunohistochemistry) if possible.
-
 It's worth noting that several tools and platforms such as Seurat, Scanpy, and Single Cell Portal are developed specifically for scRNA-seq data analysis and offer many of the mentioned analysis steps.
-
 Lastly, please remember to check the assumptions and limitations of each method before using it and always consult with a trained bioinformatician or statistician if you are unsure. Analysis of scRNA-seq data can be complex and it's important to get it right.
 """
