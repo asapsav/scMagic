@@ -35,6 +35,7 @@ To advance AI alingment we want to learn how to solve complex planning and creat
 - [ ] 1) Optimise chain
 - [ ] 2) Optimise prompts
 - [ ] 3) Optimise models (PERF / RL)
+- [ ] 4) Attempt cost saving meaures (smaller models, smaller prompts, smaller chain loops, remove unnessesary chain loops (sepparate startup lol))
 
 ### Some relevant resources for Agent tools and books
 
