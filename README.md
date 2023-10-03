@@ -46,6 +46,7 @@ To advance AI alingment we want to learn how to solve complex planning and creat
 - Community-curated list of software packages and data resources for single-cell, including RNA-seq, ATAC-seq, etc. https://github.com/seandavi/awesome-single-cell
 - also some curated list of tools, data, and “books” https://github.com/mdozmorov/scRNA-seq_notes
 - A collection of sc studies with input data and papers https://singlecell.broadinstitute.org/single_cell
+- BioTuring database of scRNA-seq and notebooks https://datascience.bioturing.com/notebook
 
 ### Prototypes
 
