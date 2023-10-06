@@ -1,5 +1,5 @@
 PLANNER_AGENT_MINDSET = """
-Sure, analyzing scRNA-seq data involves multiple steps, each of which requires specialized computational tools and knowledge. Here is a general workflow to get you started:
+Analyzing scRNA-seq data involves multiple steps, each of which requires specialized computational tools and knowledge. Here is a general workflow to get you started:
 
 1. **Quality Control (QC):** Before proceeding with any analysis, it is important to perform quality control checks on your raw scRNA-seq data. This will help you to identify and remove low-quality cells and genes. Tools such as FastQC and MultiQC can provide comprehensive quality reports.
 

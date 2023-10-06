@@ -6,9 +6,14 @@ import streamlit as st
 
 import pandas as pd
 
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+
 from langchain.agents import initialize_agent, Tool
 from langchain.callbacks import StreamlitCallbackHandler
-from langchain.agents.agent_toolkits import create_python_agent
+from langchain.agents.agent_toolkits import create_python_agent , create_pandas_dataframe_agent
 from langchain.tools.python.tool import PythonREPLTool
 from langchain.python import PythonREPL
 from langchain.llms.openai import OpenAI
@@ -29,6 +34,7 @@ st.title("🧬 scMagic: run scRNA-seq analysis")
 user_openai_api_key = st.sidebar.text_input(
     "OpenAI API Key", type="password", help="Set this to run your own custom questions."
 )
+user_openai_api_key = os.environ.get('OPENAI_API_KEY')
 
 st.session_state.disabled = True
 if user_openai_api_key:
@@ -57,10 +63,11 @@ agent_executor = create_python_agent(
     agent_type=AgentType.OPENAI_FUNCTIONS,
     agent_executor_kwargs={"handle_parsing_errors": True},
 )
-df = pd.read_csv
+from sklearn.datasets import load_iris
+data = load_iris(as_frame=True).data
 agent = create_pandas_dataframe_agent(
     ChatOpenAI(temperature=0, model="gpt-3.5-turbo-0613", openai_api_key=user_openai_api_key),
-    df,
+    data,
     verbose=True,
     agent_type=AgentType.OPENAI_FUNCTIONS,
 )
