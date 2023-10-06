@@ -14,7 +14,7 @@ Manifesto:
 * usefull AI <=> 1) reliable 2) result-interpretable
 
 ## Why?
-To advance AI alingment we want to learn how to solve complex planning and creativity problems. scRNA-seq analyis is one of those problems, that we feel competitive advantage in.
+To advance AI alingment we want to learn how to solve complex planning and design problems. scRNA-seq analyis is one of those problems, that this team happens to have exposure to.
 
 ### Roadmap
 
