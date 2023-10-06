@@ -1,5 +1,5 @@
 # scMagic
-We aim to create a useful co-pilot for scRNA-seq analysis
+AI co-pilot for scRNA-seq analysis
 > This repository is, I cannot stress this enough, very experimental. Do not use it as a dependency.
 
 ## Who?
@@ -7,10 +7,11 @@ We aim to create a useful co-pilot for scRNA-seq analysis
 - Evgenii K - M.S. Physics MIPT, PhD Harvard Medical School
 
 ## What?
-### v0.2 vision
-
-1) Upload scRNA-seq inputs along with some research questions
+### v0.3 vision
+1) Upload scRNA-seq data, research background, research questions, things to try and things to be aware of.
 2) LLM agent-based AI runs the analysis on the cloud, then emails you when the report is ready.
+Manifesto:
+* usefull AI <=> 1) reliable 2) result-interpretable
 
 ## Why?
 To advance AI alingment we want to learn how to solve complex planning and creativity problems. scRNA-seq analyis is one of those problems, that we feel competitive advantage in.
@@ -37,7 +38,7 @@ To advance AI alingment we want to learn how to solve complex planning and creat
 - [ ] 3) Optimise models (PERF / RL)
 - [ ] 4) Attempt cost saving meaures (smaller models, smaller prompts, smaller chain loops, remove unnessesary chain loops (sepparate startup lol))
 
-### Some relevant resources for Agent tools and books
+### Some relevant resources for agents to use
 
 - A collection of  scRNA tools https://www.scrna-tools.org/analysis
 - The triumphs and limitations of computational methods for scRNA-seq https://www.nature.com/articles/s41592-021-01171-x
