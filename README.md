@@ -1,5 +1,5 @@
 # scMagic
-AI co-pilot for scRNA-seq analysis
+AI co-pilot for scRNA-seq analysis. Serves as valuable tool that can handle computational and data-driven tasks, leaving researchers more time for conceptual work.
 > This repository is, I cannot stress this enough, very experimental. Do not use it as a dependency.
 
 ## Who?
