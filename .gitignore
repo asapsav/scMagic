@@ -9,6 +9,9 @@ __pycache__/
 # C extensions
 *.so
 
+# datsets
+local_collection/
+
 # Distribution / packaging
 .Python
 build/

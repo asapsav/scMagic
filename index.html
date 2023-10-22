@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branching Solution</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {
+            display: block;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="800" height="600"></canvas>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        class Branch {
+            constructor(start, angle, length) {
+                this.start = start;
+                this.angle = angle;
+                this.length = length;
+                this.end = {
+                    x: this.start.x + Math.cos(this.angle) * this.length,
+                    y: this.start.y + Math.sin(this.angle) * this.length
+                };
+                this.grown = false;
+            }
+
+            show() {
+                ctx.beginPath();
+                ctx.moveTo(this.start.x, this.start.y);
+                ctx.lineTo(this.end.x, this.end.y);
+                ctx.lineWidth = this.length * 0.01;
+                ctx.strokeStyle = "#ddd";
+                ctx.stroke();
+            }
+
+            branch() {
+                const newAngle1 = this.angle + Math.PI / 6;
+                const newAngle2 = this.angle - Math.PI / 6;
+                const newLength = this.length * 0.67;
+                const right = new Branch(this.end, newAngle1, newLength);
+                const left = new Branch(this.end, newAngle2, newLength);
+                return [right, left];
+            }
+        }
+
+        let tree = [];
+        let branches = [];
+
+        const root = new Branch({ x: canvas.width / 2, y: canvas.height }, -Math.PI / 2, 150);
+        branches.push(root);
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            if (branches.length > 0) {
+                const nextGen = [];
+                branches.forEach(branch => {
+                    branch.show();
+                    if (!branch.grown) {
+                        nextGen.push(...branch.branch());
+                        branch.grown = true;
+                    }
+                });
+                tree.push(...branches);
+                branches = nextGen;
+            }
+
+            if (Math.random() < 0.05 && tree.length > 1) {
+                const idx = Math.floor(Math.random() * tree.length);
+                tree.splice(idx, 1);
+            }
+
+            tree.forEach(branch => branch.show());
+
+            if (tree.length === 1) {
+                ctx.font = "24px Arial";
+                ctx.fillStyle = "#ddd";
+                ctx.textAlign = "center";
+                ctx.fillText("Solution found!", canvas.width / 2, canvas.height / 2);
+                return;
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+</html>
