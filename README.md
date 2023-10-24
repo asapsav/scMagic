@@ -1,5 +1,5 @@
 # scMagic
-AI co-pilot for scRNA-seq analysis
+AI co-pilot for scRNA-seq analysis. Serves as valuable tool that can handle computational and data-driven tasks, leaving researchers more time for conceptual work.
 > This repository is, I cannot stress this enough, very experimental. Do not use it as a dependency.
 
 ## Who?
@@ -33,6 +33,7 @@ To advance AI alingment we want to learn how to solve complex planning and desig
 - [ ] Expand agents tools to predict complexity of the question (incorporate system 1 and 2 thinking)
 - [ ] Expand agents tools to include "setting up dev environments"
 - [ ] Incorporate "exploration" or balance "horisontal vs vertical research strategy"
+- [ ] Redundancy (Shuttle computers)
 - [ ] 1) Optimise chain
 - [ ] 2) Optimise prompts
 - [ ] 3) Optimise models (PERF / RL)
